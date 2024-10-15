@@ -22,14 +22,34 @@ class MyCardPage extends StatelessWidget {
         ),
         ),
       ),
-      body:const SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.all(20.0),
+      body: SingleChildScrollView(
+        child: Padding(padding:
+        const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            SizedBox(height: 20,),
-            BackCard(),
-            SizedBox(height: 25,),
-            CreditCard()
+          const  SizedBox(height: 20,),
+           const BackCard(),
+           const SizedBox(height: 25,),
+           const CreditCard(),
+            const SizedBox(height: 30),
+            TextButton.icon(onPressed: (){},
+            icon:const Icon(Icons.add), 
+            label:const Text(
+                  "Add new card",
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  side: BorderSide(color: Colors.grey[100]!),
+                  fixedSize: const Size(double.maxFinite, 55),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)
+                  ),
+                  backgroundColor: Colors.grey[100],
+                  foregroundColor: Colors.black
+                ), )
           ],
         ),),
       )
@@ -105,7 +125,9 @@ class BackCard extends StatelessWidget {
                 ),
                 const Text(
                   "Tesloach Ker",
-                  style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.bold),
+                  style: TextStyle(color: Colors.white,
+                   fontSize: 19, 
+                   fontWeight: FontWeight.w600,),
                 ),
               ],
             ),
