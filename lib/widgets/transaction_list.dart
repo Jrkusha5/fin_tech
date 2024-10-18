@@ -26,7 +26,7 @@ class TransactionList extends StatelessWidget {
             ),
           ),
                  Divider(color: Colors.grey[200],),
-         const  ListTile(
+            const ListTile(
               leading: CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 239, 243, 245),
                 child: Icon(
@@ -36,13 +36,13 @@ class TransactionList extends StatelessWidget {
               ),
               title: Text("Gym"),
               subtitle: Text("payment"),
-              trailing: Text("-\400.00 ETB",
+              trailing: Text("-400.00 ETB",
               style: TextStyle(color:Colors.red),
               ),
 
             ),
              Divider(color: Colors.grey[200],),
-          const   ListTile(
+            const ListTile(
               leading: CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 239, 243, 245),
                 child: Icon(
@@ -52,13 +52,13 @@ class TransactionList extends StatelessWidget {
               ),
               title: Text("Bank of Abssinya"),
               subtitle: Text("Deposit"),
-              trailing: Text("+\1546.00 ETB",
+              trailing: Text("+1546.00 ETB",
               style: TextStyle(color:Colors.green),
               ),
 
             ),
             Divider(color: Colors.grey[200],),
-           const  ListTile(
+           const ListTile(
               leading: CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 239, 243, 245),
                 child: Icon(
@@ -68,7 +68,7 @@ class TransactionList extends StatelessWidget {
               ),
               title: Text("For Donation"),
               subtitle: Text("Sent"),
-              trailing: Text("-\680.00 ETB",
+              trailing: Text("-680.00 ETB",
               style: TextStyle(color:Colors.red),
               ),
 
