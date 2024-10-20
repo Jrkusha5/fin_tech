@@ -1,5 +1,6 @@
 
 import 'package:fintech/widgets/time_option_button.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 //import 'package:fintech/pages/scan.dart';
 
@@ -97,80 +98,83 @@ class ActivityPage extends StatelessWidget {
                 border: Border.all(color:Colors.grey[300]!),
                 borderRadius: BorderRadius.circular(17),
               ),
-              child:const Column(
+              child: Column(
                 children: [
-                  Text("Total Spending",
+                const  Text("Total Spending",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: Colors.grey,
 
                   ),),
-                  SizedBox(height: 4,),
-                   Text("6,345.00 ETB",
+                const  SizedBox(height: 4,),
+                  const Text("6,345.00 ETB",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                    
 
                   ),),
-                  SizedBox(height: 12,),
-                  TimeoptionRow(),
-                  SizedBox(height: 16,),
-                  // Expanded(child: LineChart(
-                  //   LineChartData(
-                  //     gridData:FlGridData(show:false),
-                  //     titlesData:FlTitleData(
-                  //       leftTitles:AxisTitles(
-                  //         sideTitles:SideTitles(showTitles:false),
-                  //         bottomTitles:AxisTitles(sideTitles:SideTitles(
-                  //           showTitles:true,
-                  //           getTitlesWidget:(value,meta){
-                  //             const titles=['s', 'm','t','w','t','f'];
-                  //             final index= value.toint();
-                  //             if(index>=0 && index < titles.length){
-                  //               return Text(
-                  //                 titles(index),
-                  //                 style: const TextStyle(color: Colors.grey),
-                  //               );
-                  //             }
-                  //             return const Text("");
-                  //           },
-                  //           reservedSize:22,
-                  //           interval:1
-                  //         ))
-                  //         rightTitles:AxisTitles(
-                  //           sideTitles:SsideTitles(showTitles:false),
-                  //         ),
-                  //          topTitles:AxisTitles(
-                  //           sideTitles:SsideTitles(showTitles:false),
-                  //         ),
+                const  SizedBox(height: 12,),
+                const  TimeoptionRow(),
+                const  SizedBox(height: 16,),
 
-                  //       ),
-                  //       borderData:FlBorderData(show:false),
-                  //       lineBarsData:[
-                  //         LineChartBarData(
-                  //           spots:[
-                  //             const FlSpot(0,2),
-                  //             const FlSpot(1,2),
-                  //             const FlSpot(2,4),
-                  //             const FlSpot(4,3),
-                  //             const FlSpot(5,4),
-                  //             const FlSpot(6,6),
-                  //           ],
-                  //           isCurved:true,
-                  //           color:Colors.teal,
-                  //           barWidth:3,
-                  //           dotData:const FlDotData(show:false),
-                  //           belowBarData:BarAreaData(
-                  //             show:true,
-                  //             color:Colors.real.withOpacity(0.07),
-                  //           )
-                  //         )
-                  //       ],
-                  //     ),
-                  //   )
-                  // ))
+                 
+                  Expanded(child: LineChart(
+                    LineChartData(
+                      gridData:const FlGridData(show:false),
+                      titlesData:FlTitlesData(
+                        leftTitles:const AxisTitles(
+                          sideTitles: SideTitles(showTitles:false),
+                          ),
+                          bottomTitles:AxisTitles(sideTitles:SideTitles(
+                            showTitles:true,
+                            getTitlesWidget:(value,meta){
+                              const titles=['S', 'M','T','W','T','F'];
+                              final index= value.toInt();
+                              if(index>=0 && index < titles.length){
+                                return Text( 
+                                  titles[index],
+                                  style: const TextStyle(color: Colors.black),
+                                );
+                              }
+                              return const Text("");
+                            },
+                            reservedSize:22,
+                            interval:1
+                          ),
+                          ),
+                          rightTitles:const AxisTitles(
+                            sideTitles:SideTitles(showTitles:false),
+                          ),
+                           topTitles: const AxisTitles(
+                            sideTitles:SideTitles(showTitles:false),
+                           ),
+                      ),
+                        borderData:FlBorderData(show:false),
+                        lineBarsData:[
+                          LineChartBarData(
+                            spots:[
+                              const FlSpot(0,2),
+                              const FlSpot(1,1),
+                              const FlSpot(2,4),
+                              const FlSpot(4,3),
+                              const FlSpot(5,4),
+                              const FlSpot(6,6),
+                            ],
+                            isCurved:true,
+                            color:Colors.teal,
+                            barWidth:3,
+                            dotData:const FlDotData(show:false),
+                            belowBarData:BarAreaData(
+                              show:true,
+                              color:Colors.teal.withOpacity(0.07),
+                            )
+                          )
+                        ],
+                     
+                    )
+                  ))
                 ],
               ),
              ),

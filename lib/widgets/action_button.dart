@@ -1,3 +1,4 @@
+import 'package:fintech/pages/transfer_money.dart';
 import 'package:flutter/material.dart';
 
 class ActionButtons extends StatelessWidget {
@@ -15,24 +16,31 @@ class ActionButtons extends StatelessWidget {
           color: const Color.fromARGB(255, 239, 243, 245),
           borderRadius: BorderRadius.circular(15),
         ),
-        child: const Row(
+        child:  Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ActionButton(
               icon: Icons.account_balance,
               label: 'Deposit', 
+              onPressed: (){},
             ),
              ActionButton(
               icon: Icons.swap_horiz,
               label: 'Transfer', 
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=>const TransferMoney()));
+              },
             ),
              ActionButton(
               icon: Icons.attach_money,
               label: 'Withdraw', 
+              onPressed: (){},
             ),
              ActionButton(
               icon: Icons.apps_sharp,
               label: 'More', 
+              onPressed: (){},
             ),
             
           ],
