@@ -85,7 +85,7 @@ class _TopUpButtonSheetState extends State<TopUpButtonSheet> {
         Slider(value: amount,
         min: 5,
         max: 5000,
-        activeColor:const Color.fromARGB(255, 16, 80, 90),
+        activeColor:const Color.fromARGB(255, 16, 82, 90),
          onChanged: (value){
           setState(() {
             amount=value;
