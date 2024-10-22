@@ -14,7 +14,6 @@ class Home extends StatelessWidget {
    
     return  Scaffold(
       backgroundColor: const Color.fromARGB(255,16,80,90),
-
       body:SafeArea(
         bottom:false,
         child: Column(

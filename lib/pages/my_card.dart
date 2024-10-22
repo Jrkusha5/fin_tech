@@ -1,3 +1,4 @@
+import 'package:fintech/pages/home.dart';
 import 'package:fintech/widgets/credit_card.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,9 @@ class MyCardPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: IconButton.outlined(onPressed: (){}, 
+        leading: IconButton.outlined(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>const Home()));
+        }, 
         icon:const Icon(
           Icons.arrow_back_ios_new,
           size: 20,

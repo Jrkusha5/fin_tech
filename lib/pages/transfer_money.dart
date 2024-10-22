@@ -10,10 +10,11 @@ class TransferMoney extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: (){},
-         icon:const Icon(Icons.arrow_back_ios_new)),
+        leading: IconButton.outlined(onPressed: ()=>Navigator.pop(context),
+         icon:const Icon(Icons.arrow_back_ios_new),),
          title: const Text("Transfer"),
       ),
+      
 
       body: SingleChildScrollView(
         padding:const EdgeInsets.all(20),
@@ -125,12 +126,12 @@ class TransferMoney extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor:  Colors.black,
               foregroundColor: Colors.white,
-              fixedSize: Size(double.maxFinite,60),
+              fixedSize:const Size(double.maxFinite,60),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               )
             ),
-            child: Text("continue",style: TextStyle(fontSize: 18,
+            child:const Text("continue",style: TextStyle(fontSize: 18,
             fontWeight: FontWeight.bold),),
             )
           ],
