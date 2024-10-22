@@ -109,7 +109,7 @@ class TransferMoney extends StatelessWidget {
                     
                           ),
                          const Text("abebe",style: TextStyle(fontWeight: FontWeight.bold),),
-                          Text("bekele",style: TextStyle(fontWeight: FontWeight.bold),),
+                         const Text("bekele",style: TextStyle(fontWeight: FontWeight.bold),),
                     
                         ],
                       ),
@@ -121,7 +121,7 @@ class TransferMoney extends StatelessWidget {
             const SizedBox(height: 50,),
 
             ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>TopUpPage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const TopUpPage()));
             }, 
             style: ElevatedButton.styleFrom(
               backgroundColor:  Colors.black,
