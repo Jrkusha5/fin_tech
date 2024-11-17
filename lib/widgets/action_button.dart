@@ -1,3 +1,4 @@
+import 'package:fintech/pages/deposit_page.dart';
 import 'package:fintech/pages/transfer_money.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,10 @@ class ActionButtons extends StatelessWidget {
             ActionButton(
               icon: Icons.account_balance,
               label: 'Deposit', 
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=>const DepositPage()));
+              },
             ),
              ActionButton(
               icon: Icons.swap_horiz,

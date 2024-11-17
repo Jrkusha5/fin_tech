@@ -2,6 +2,8 @@
 import 'package:fintech/widgets/time_option_button.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 //import 'package:fintech/pages/scan.dart';
 
 class ActivityPage extends StatelessWidget {
@@ -17,11 +19,9 @@ class ActivityPage extends StatelessWidget {
           onPressed: (){},
          icon: const Icon(Icons.arrow_back_ios_new)
          ),
-         title:const Center(
+         title: Center(
            child:  Text("Activity",
-           style: TextStyle(
-            fontWeight: FontWeight.w300,
-           ),),
+           style: GoogleFonts.lato(fontSize: 20, fontWeight: FontWeight.w300),),
          ),
          actions: [
               IconButton.outlined(onPressed: (){},
@@ -50,29 +50,20 @@ class ActivityPage extends StatelessWidget {
                         padding:const  EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                           const Text("SmartPay Cards",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600
-                            ),),
+                            Text("SmartPay Cards",
+                            style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600,color: Colors.white),),
                            const Spacer(),
-                          const  Text("****1990",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600
-                            ),),
+                           Text("****1990",
+                          style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600,color: Colors.white),),
                             Padding(
                               padding: const EdgeInsets.all(12.0),
                               child: Row(
-                                             mainAxisAlignment: MainAxisAlignment.start,
-                                            children: [
-                                             CircleAvatar(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                               CircleAvatar(
                               radius: 15,
-                              backgroundColor: Colors.white.withOpacity(0.8),
-                                                      ),
-                                                      Transform.translate(
+                              backgroundColor: Colors.white.withOpacity(0.8), ),
+                              Transform.translate(
                               offset:const  Offset(-10, 0),
                               child: CircleAvatar(
                                 radius: 15,
@@ -100,13 +91,9 @@ class ActivityPage extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                const  Text("Total Spending",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.grey,
+                  Text("Total Spending",
+            style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600,color: Colors.grey),),
 
-                  ),),
                 const  SizedBox(height: 4,),
                   const Text("6,345.00 ETB",
                   style: TextStyle(
@@ -179,22 +166,19 @@ class ActivityPage extends StatelessWidget {
               ),
              ),
             const SizedBox(height: 25,),
-            const Row(
+             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Transaction",
-                style: TextStyle(
-                  fontSize: 19,
-                  fontWeight: FontWeight.bold,
-                ),),
+                Text("Transaction",   
+              style: GoogleFonts.lato(fontSize: 19, fontWeight: FontWeight.bold),
+
+                ),
                 Row(
                   children: [
                     Text("All",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),),
-                Icon(
+                style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+               const Icon(
                   Icons.keyboard_arrow_down,
                   color: Colors.teal,
                 )
@@ -204,24 +188,22 @@ class ActivityPage extends StatelessWidget {
               ],
             ),Column(
               children: List.generate(3,
-               (index)=>const ListTile(
-                leading: CircleAvatar(
+               (index)=> ListTile(
+                leading:const CircleAvatar(
                   backgroundColor: Color.fromARGB(255, 239, 243, 245),
                   child: Icon(Icons.payment_rounded,
                    color:Colors.teal,),
                  
                 ),
                 title: Text("Smartpay ",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),),
+                
+                style: GoogleFonts.lato(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
                 subtitle: Text("withdraw"),
                 trailing: Text("-400.00 ETB",
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold
-                ),),
+                
+                style: GoogleFonts.lato(fontSize: 17, fontWeight: FontWeight.bold),
+                ),
                )),
             )
             ],
