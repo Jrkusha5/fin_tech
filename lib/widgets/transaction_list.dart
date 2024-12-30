@@ -30,11 +30,11 @@ class TransactionList extends StatelessWidget {
               leading: CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 239, 243, 245),
                 child: Icon(
-                  Icons.fitness_center,
+                  Icons.attach_money,
                   color: Colors.purpleAccent,
                 ),
               ),
-              title: Text("Gym"),
+              title: Text("Tax"),
               subtitle: Text("payment"),
               trailing: Text("-400.00 ETB",
               style: TextStyle(color:Colors.red),
@@ -54,6 +54,22 @@ class TransactionList extends StatelessWidget {
               subtitle: Text("Deposit"),
               trailing: Text("+1546.00 ETB",
               style: TextStyle(color:Colors.green),
+              ),
+
+            ),
+            Divider(color: Colors.grey[200],),
+            const ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Color.fromARGB(255, 239, 243, 245),
+                child: Icon(
+                  Icons.restaurant,
+                  color: Colors.teal,
+                ),
+              ),
+              title: Text("Restaurant"),
+              subtitle: Text("payment"),
+              trailing: Text("-2000.00 ETB",
+              style: TextStyle(color:Colors.red),
               ),
 
             ),

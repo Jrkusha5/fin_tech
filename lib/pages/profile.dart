@@ -7,9 +7,9 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const coffeePrimary = Color(0xFF6F4E37); // Coffee brown
-    const coffeeAccent = Color(0xFFA67B5B); // Lighter coffee shade
-    const backgroundColor = Color(0xFFF5F5DC); // Beige background
+    const primaryColor = Color.fromARGB(255, 16, 80, 98);
+    const accentColor = Color.fromARGB(255, 55, 140, 160); // Lighter shade of the primary color
+    const backgroundColor = Color(0xFFF5F5F5); // Light background
 
     return Scaffold(
       backgroundColor: backgroundColor,
@@ -18,7 +18,7 @@ class ProfilePage extends StatelessWidget {
           'Profile',
           style: GoogleFonts.lato(fontWeight: FontWeight.bold),
         ),
-        backgroundColor: coffeePrimary,
+        backgroundColor: primaryColor,
         elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -27,7 +27,7 @@ class ProfilePage extends StatelessWidget {
             Container(
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: coffeePrimary,
+                color: primaryColor,
                 borderRadius: BorderRadius.vertical(
                   bottom: Radius.circular(30),
                 ),
@@ -37,11 +37,11 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 60,
-                    backgroundImage: AssetImage('assets/person.jpeg'), // Add a profile image in this path
+                    backgroundImage: AssetImage('assets/profile.jpg'), // Add a profile image in this path
                   ),
                   const SizedBox(height: 15),
                   Text(
-                    "Tesloach",
+                    "Abebe",
                     style: GoogleFonts.lato(
                       color: Colors.white,
                       fontSize: 22,
@@ -49,9 +49,9 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Tesloach@gmail.com",
+                    "abebe@gmail.com",
                     style: GoogleFonts.lato(
-                      color: coffeeAccent,
+                      color: accentColor,
                       fontSize: 16,
                     ),
                   ),
@@ -66,7 +66,7 @@ class ProfilePage extends StatelessWidget {
                   ProfileItem(
                     icon: Icons.person,
                     title: "Edit Profile",
-                    color: coffeePrimary,
+                    color: primaryColor,
                     onTap: () {
                       // Add your edit profile logic here
                     },
@@ -74,7 +74,7 @@ class ProfilePage extends StatelessWidget {
                   ProfileItem(
                     icon: Icons.settings,
                     title: "Settings",
-                    color: coffeePrimary,
+                    color: primaryColor,
                     onTap: () {
                       // Add your settings logic here
                     },
@@ -82,7 +82,7 @@ class ProfilePage extends StatelessWidget {
                   ProfileItem(
                     icon: Icons.notifications,
                     title: "Notifications",
-                    color: coffeePrimary,
+                    color: primaryColor,
                     onTap: () {
                       // Add your notifications logic here
                     },
@@ -90,7 +90,7 @@ class ProfilePage extends StatelessWidget {
                   ProfileItem(
                     icon: Icons.lock,
                     title: "Privacy",
-                    color: coffeePrimary,
+                    color: primaryColor,
                     onTap: () {
                       // Add your privacy logic here
                     },
@@ -98,7 +98,7 @@ class ProfilePage extends StatelessWidget {
                   ProfileItem(
                     icon: Icons.logout,
                     title: "Log Out",
-                    color: coffeePrimary,
+                    color: primaryColor,
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
@@ -123,14 +123,14 @@ class ProfilePage extends StatelessWidget {
                     style: GoogleFonts.lato(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: coffeePrimary,
+                      color: primaryColor,
                     ),
                   ),
                   subtitle: Text(
                     "View your recent activity",
-                    style: GoogleFonts.lato(color: coffeeAccent),
+                    style: GoogleFonts.lato(color: accentColor),
                   ),
-                  trailing: Icon(Icons.arrow_forward_ios, color: coffeePrimary),
+                  trailing: Icon(Icons.arrow_forward_ios, color: primaryColor),
                   onTap: () {
                     // Add your activity page logic here
                   },

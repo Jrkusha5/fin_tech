@@ -1,6 +1,8 @@
+import 'package:fintech/pages/WithdrawPage.dart';
 import 'package:fintech/pages/deposit_page.dart';
 import 'package:fintech/pages/transfer_money.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ActionButtons extends StatelessWidget {
   const ActionButtons({super.key});
@@ -17,43 +19,44 @@ class ActionButtons extends StatelessWidget {
           color: const Color.fromARGB(255, 239, 243, 245),
           borderRadius: BorderRadius.circular(15),
         ),
-        child:  Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ActionButton(
               icon: Icons.account_balance,
               label: 'Deposit', 
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(context, MaterialPageRoute(
-                  builder: (context)=>const DepositPage()));
+                  builder: (context) => const DepositPage()));
               },
             ),
-             ActionButton(
+            ActionButton(
               icon: Icons.swap_horiz,
               label: 'Transfer', 
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(context, MaterialPageRoute(
-                  builder: (context)=>const TransferMoney()));
+                  builder: (context) => const TransferMoney()));
               },
             ),
-             ActionButton(
+            ActionButton(
               icon: Icons.attach_money,
               label: 'Withdraw', 
-              onPressed: (){},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => const WithdrawPage()));
+              },
             ),
-             ActionButton(
+            ActionButton(
               icon: Icons.apps_sharp,
               label: 'More', 
-              onPressed: (){},
+              onPressed: () {},
             ),
-            
           ],
         ),
       ),
     );
   }
 }
-
 
 class ActionButton extends StatelessWidget {
   const ActionButton({
@@ -82,7 +85,10 @@ class ActionButton extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           label,
-          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+          style: GoogleFonts.lato(
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ],
     );

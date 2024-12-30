@@ -92,16 +92,12 @@ class ActivityPage extends StatelessWidget {
               child: Column(
                 children: [
                   Text("Total Spending",
-            style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600,color: Colors.grey),),
+            style: GoogleFonts.lato(fontSize: 16, fontWeight: FontWeight.w600,color: Colors.black),),
 
                 const  SizedBox(height: 4,),
-                  const Text("6,345.00 ETB",
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                   
+                   Text("6,345.00 ETB",
+               style: GoogleFonts.lato(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black),),
 
-                  ),),
                 const  SizedBox(height: 12,),
                 const  TimeoptionRow(),
                 const  SizedBox(height: 16,),
@@ -191,7 +187,7 @@ class ActivityPage extends StatelessWidget {
                (index)=> ListTile(
                 leading:const CircleAvatar(
                   backgroundColor: Color.fromARGB(255, 239, 243, 245),
-                  child: Icon(Icons.payment_rounded,
+                  child: Icon(Icons.account_balance_wallet,
                    color:Colors.teal,),
                  
                 ),

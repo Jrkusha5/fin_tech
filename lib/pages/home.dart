@@ -26,15 +26,15 @@ class Home extends StatelessWidget {
                     children: [
                       Text(
                         'WELCOME BACK',
-                        style: GoogleFonts.roboto(
+                        style: GoogleFonts.lato(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                         ),
                       ),
                       Text(
-                        'Tesloach Ker',
-                        style: GoogleFonts.roboto(
+                        'Abebe Kebede',
+                        style: GoogleFonts.lato(
                           color: Colors.white,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
