@@ -158,16 +158,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       // Google Sign-In logic
                     },
                   ),
-                  // const SizedBox(width: 20),
-                  // IconButton(
-                  //   icon: Image.asset(
-                  //     'assets/paypal.jpg',
-                  //     height: 40,
-                  //   ),
-                  //   onPressed: () {
-                  //     // PayPal Sign-In logic
-                  //   },
-                  // ),
+                 
                 ],
               ),
               const SizedBox(height: 30),
